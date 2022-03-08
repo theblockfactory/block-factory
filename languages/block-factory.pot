@@ -1,0 +1,80 @@
+# Copyright (C) 2022 BlockFactory
+# This file is distributed under the same license as the BlockFactory package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BlockFactory\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: BlockFactory <info@blockfactory.io>\n"
+"Report-Msgid-Bugs-To: https://blockfactory.io/support\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/Framework/BlockFactory.php:40
+msgid "minimum required PHP version is 7.4. Your site is running on PHP %s"
+msgstr ""
+
+#: src/Framework/BlockFactory.php:50
+msgid "Block Editor (Gutenberg) is not enabled. Please update your WordPress to the latest version."
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:18
+msgid "Blocks"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:19, src/BlockBuilder/Actions/RegisterPostType.php:35
+msgid "Block"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:20
+msgid "Add Block"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:21
+msgid "Add New Block"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:22
+msgid "Edit Block"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:23
+msgid "New Block"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:24
+msgid "All Blocks"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:25
+msgid "View Block"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:26
+msgid "Search Blocks"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:27
+msgid "No blocks found."
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:28
+msgid "No blocks found in Trash."
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:30, src/BlockBuilder/Actions/RegisterPostType.php:31
+msgid "Block Factory"
+msgstr ""
+
+#: src/BlockBuilder/Actions/RegisterPostType.php:79
+msgid "Create a new custom block"
+msgstr ""
+
+#: src/Framework/Contracts/Endpoint.php:30
+msgid "You dont have the right permissions to use BlockFactory plugin"
+msgstr ""

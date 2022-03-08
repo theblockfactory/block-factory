@@ -1,0 +1,31 @@
+{
+    "name": "blockfactory",
+    "version": "1.0.0",
+    "description": "Block Factory - Visual builder for Gutenberg blocks",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm ci && npm run watch",
+        "dev": "mix",
+        "build": "mix --production",
+        "watch": "mix watch"
+    },
+    "homepage": "https://blockfactory.io/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/theblockfactory/"
+    },
+    "author": "BlockFactory",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.13.10",
+        "@babel/eslint-parser": "^7.13.10",
+        "@babel/plugin-syntax-jsx": "^7.16.0",
+        "@babel/preset-env": "^7.13.10",
+        "@babel/preset-react": "^7.16.0",
+        "laravel-mix": "^6.0.13",
+        "postcss": "^8.2.8",
+        "prettier": "^2.2.1",
+        "webpack": "^5.60.0",
+        "wp-pot": "latest"
+    }
+}
