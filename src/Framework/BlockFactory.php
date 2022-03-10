@@ -51,7 +51,7 @@ class BlockFactory extends Container
 			return;
 		}
 
-		add_action('init', [$this, 'init']);
+		add_action('plugins_loaded', [$this, 'init'], 0);
 	}
 
 	/**

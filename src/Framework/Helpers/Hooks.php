@@ -67,7 +67,7 @@ class Hooks
 		add_filter(
 			$hook,
 			function () use ($class, $method) {
-				call_user_func_array([BlockFactory($class), $method], func_get_args());
+				return call_user_func_array([BlockFactory($class), $method], func_get_args());
 			},
 			$priority,
 			$args

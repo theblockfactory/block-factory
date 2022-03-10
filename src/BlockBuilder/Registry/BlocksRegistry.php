@@ -63,7 +63,7 @@ class BlocksRegistry
         $blocks = [];
 
         foreach ($this->blocks as $block) {
-            if ( $block instanceof Dynamic) {
+            if ($block instanceof Dynamic) {
                 $blocks[] = (new DynamicBlockViewModel($block))->toArray();
             }
         }
@@ -78,23 +78,19 @@ class BlocksRegistry
         }
     }
 
-    public function registerBlocksCategories($registeredCategories): array
+    public function registerBlocksCategories(array $registeredCategories): array
     {
         $categories = [];
 
         foreach ($this->blocks as $block) {
-            $settings = $block->toArray();
-
-            $slug = $settings[ 'category' ][ 'slug' ];
-
-            if ( ! array_key_exists($slug, $categories)) {
-                $categories[$slug] = $settings[ 'category' ];
-            }
+            $categories[] = $block->toArray()[ 'category' ];
         }
 
-        return array_merge(
-            $registeredCategories,
-            $categories
+        $filtered = array_intersect_key(
+            $categories,
+            array_unique(array_column($categories, 'slug'))
         );
+
+        return array_merge( $filtered, $registeredCategories);
     }
 }

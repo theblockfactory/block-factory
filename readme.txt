@@ -1,5 +1,5 @@
 === Block Factory ===
-Donate link: https://blockfactory.io
+Donate link: https://getblockfactory.com
 Tags: block, blocks, block factory
 Requires at least: 5.8
 Tested up to: 5.9
@@ -13,4 +13,4 @@ Blocks Factory
 == Changelog ==
 
 = 1.0.0: July 15th, 2022 =
-* New: First release of [BlocksFactory](https://blockfactory.io)!
+* New: First release of [BlocksFactory](https://getblockfactory.com)!

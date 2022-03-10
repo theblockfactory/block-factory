@@ -10,6 +10,7 @@ const extractBlocks = ( { name, attributes, innerBlocks } ) => {
 };
 
 window.BlockFactory.blocks.map( block => registerBlockType( block, {
+	category: block.category,
 	edit: () => {
 		const blockProps = useBlockProps();
 		const blocks = wp.blocks.parse( block.content );

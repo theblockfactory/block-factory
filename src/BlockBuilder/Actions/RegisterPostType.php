@@ -14,7 +14,7 @@ class RegisterPostType
 	 *
 	 * @since 1.0.0
 	 */
-	public function register(): void
+	public function __invoke(): void
 	{
 		$labels = [
 			'name'               => __('Blocks', 'block-factory'),
@@ -38,7 +38,8 @@ class RegisterPostType
 			'labels'          => $labels,
 			'supports'        => [
 				'title',
-				'editor'
+				'editor',
+                'custom-fields'
 			],
 			'show_in_rest'    => true,
 			'show_ui'         => true,

@@ -1,25 +1,33 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 2,
-    "name": "block-factory/container-block",
-    "title": "Container",
-    "category": "block-factory",
-    "icon": "welcome-widgets-menus",
-    "description": "Container Block",
-    "keywords": [
-        "container",
-        "block"
-    ],
-    "version": "1.0.0",
-    "textdomain": "block-factory",
-    "attributes": {
-        "hasBlocks": {
-            "type": "boolean",
-            "default": false
-        },
-        "lockTemplate": {
-            "type": "boolean",
-            "default": false
-        }
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "block-factory/container-block",
+  "title": "Container",
+  "category": "block-factory",
+  "icon": "layout",
+  "description": "Container Block",
+  "keywords": [
+    "container",
+    "block"
+  ],
+  "version": "1.0.0",
+  "textdomain": "block-factory",
+  "attributes": {
+    "textAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "flexWrap": {
+      "type": "boolean",
+      "default": true
+    },
+    "padding": {
+      "type": "string",
+      "default": "10px"
+    },
+    "paddingUnit": {
+      "type": "string",
+      "default": "px"
     }
+  }
 }
