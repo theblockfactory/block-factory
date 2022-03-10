@@ -2,8 +2,8 @@
 
 namespace BlockFactory\BlockBuilder;
 
-use BlockFactory\BlockBuilder\Actions\BlockBuilderMetaBox;
-use BlockFactory\BlockBuilder\Actions\RegisterPostType as BlockPostType;
+use BlockFactory\BlockBuilder\Actions\RegisterPostMeta;
+use BlockFactory\BlockBuilder\Actions\RegisterPostType;
 use BlockFactory\BlockBuilder\Registry\BlocksRegistry;
 use BlockFactory\Framework\Helpers\Hooks;
 
@@ -17,9 +17,8 @@ class ServiceProvider extends \BlockFactory\Framework\Contracts\ServiceProvider
 		/**
 		 * Register post type
 		 */
-		BlockFactory(BlockPostType::class)->register();
-
-		Hooks::addAction('admin_init', BlockBuilderMetaBox::class);
+		BlockFactory(RegisterPostType::class)->register();
+		BlockFactory(RegisterPostMeta::class)->register();
 	}
 
 	/**
@@ -28,8 +27,9 @@ class ServiceProvider extends \BlockFactory\Framework\Contracts\ServiceProvider
 	public function boot(): void
 	{
 		/**
-		 * Register blocks
+		 * Register blocks and blocks categories
 		 */
-		BlockFactory(BlocksRegistry::class)->registerBlocks();
+        Hooks::addAction('block_factory_init', BlocksRegistry::class, 'registerBlocks');
+        Hooks::addAction('block_categories_all', BlocksRegistry::class, 'registerBlocksCategories');
 	}
 }

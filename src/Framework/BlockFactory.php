@@ -52,10 +52,6 @@ class BlockFactory extends Container
 		}
 
 		add_action('init', [$this, 'init']);
-		/**
-		 * Fire the loaded action
-		 */
-		do_action('block_factory_loaded');
 	}
 
 	/**
@@ -64,18 +60,13 @@ class BlockFactory extends Container
 	 */
 	public function init(): void
 	{
-		/**
-		 * Fire the action before BlockFactory init
-		 */
-		do_action('block_factory_before_init');
+        /**
+         * Fire block factory init action
+         */
+        do_action('block_factory_init');
 
 		$this->loadTextDomain();
 		$this->loadServiceProviders();
-
-		/**
-		 * Fire the action after BlockFactory init
-		 */
-		do_action('block_factory_init');
 	}
 
 	/**
@@ -124,7 +115,7 @@ class BlockFactory extends Container
 	}
 
 	/**
-	 * Load theme textdomain
+	 * Load plugin textdomain
 	 * @since 1.0.0
 	 */
 	private function loadTextDomain(): void

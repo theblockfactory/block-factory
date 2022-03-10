@@ -3,10 +3,10 @@
 namespace BlockFactory\Blocks\Container;
 
 use BlockFactory\BlockBuilder\Models\Block;
-use BlockFactory\BlockBuilder\Contracts\BlockRegistryInterface;
+use BlockFactory\BlockBuilder\Contracts\BlockInterface;
 use BlockFactory\Framework\Helpers\View;
 
-class ContainerBlock implements BlockRegistryInterface
+class ContainerBlock implements BlockInterface
 {
 	/**
 	 * @return Block

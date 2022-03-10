@@ -4,10 +4,8 @@
     "description": "Block Factory - Visual builder for Gutenberg blocks",
     "main": "index.js",
     "scripts": {
-        "start": "npm ci && npm run watch",
-        "dev": "mix",
-        "build": "mix --production",
-        "watch": "mix watch"
+        "build": "wp-scripts build",
+        "start": "wp-scripts start"
     },
     "homepage": "https://blockfactory.io/",
     "repository": {
@@ -17,15 +15,14 @@
     "author": "BlockFactory",
     "license": "ISC",
     "devDependencies": {
-        "@babel/core": "^7.13.10",
-        "@babel/eslint-parser": "^7.13.10",
-        "@babel/plugin-syntax-jsx": "^7.16.0",
-        "@babel/preset-env": "^7.13.10",
-        "@babel/preset-react": "^7.16.0",
-        "laravel-mix": "^6.0.13",
-        "postcss": "^8.2.8",
-        "prettier": "^2.2.1",
-        "webpack": "^5.60.0",
+        "@wordpress/babel-plugin-import-jsx-pragma": "^3.1.1",
+        "@wordpress/block-editor": "^8.2.0",
+        "@wordpress/blocks": "^11.2.2",
+        "@wordpress/components": "^19.5.0",
+        "@wordpress/data": "^6.3.0",
+        "@wordpress/element": "^4.1.1",
+        "@wordpress/i18n": "^4.3.1",
+        "@wordpress/scripts": "^22.1.0",
         "wp-pot": "latest"
     }
 }

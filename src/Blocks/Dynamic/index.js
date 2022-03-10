@@ -1,6 +1,5 @@
-const { Fragment } = wp.element;
-const { registerBlockType } = wp.blocks;
-const { useBlockProps, InnerBlocks } = wp.blockEditor;
+import { registerBlockType } from '@wordpress/blocks';
+import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 const extractBlocks = ( { name, attributes, innerBlocks } ) => {
 	return [
@@ -10,22 +9,16 @@ const extractBlocks = ( { name, attributes, innerBlocks } ) => {
 	];
 };
 
-BlockFactory.blocks.map( block => registerBlockType( block, {
-	edit: ( { attributes, setAttributes } ) => {
-
-
-		console.log(block)
-
+window.BlockFactory.blocks.map( block => registerBlockType( block, {
+	edit: () => {
 		const blockProps = useBlockProps();
 		const blocks = wp.blocks.parse( block.content );
 		const blockTemplate = blocks.map( block => extractBlocks( block ) );
 
 		return (
-			<Fragment>
-				<div { ...blockProps }>
-					<InnerBlocks templateLock="all" template={ blockTemplate } />
-				</div>
-			</Fragment>
+			<div { ...blockProps }>
+				<InnerBlocks templateLock="all" template={ blockTemplate } />
+			</div>
 		);
 	},
 	save() {

@@ -7,7 +7,7 @@ use BlockFactory\BlockBuilder\Models\Block;
 /**
  * @since 1.0.0
  */
-interface BlockRegistryInterface
+interface BlockInterface
 {
 	public function __invoke(): Block;
 }

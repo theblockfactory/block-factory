@@ -1,14 +1,13 @@
-const { __ } = wp.i18n;
-const { Fragment } = wp.element;
-const { useSelect } = wp.data;
-const { registerBlockType } = wp.blocks;
-const { InspectorControls, useBlockProps, InnerBlocks } = wp.blockEditor;
-const { PanelBody, ToggleControl, TextControl, SelectControl } = wp.components;
+import { __ } from '@wordpress/i18n';
+import { Fragment } from '@wordpress/element';
+import { registerBlockType } from '@wordpress/blocks';
+import { InnerBlocks, InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { PanelBody, ToggleControl } from '@wordpress/components';
 
 import block from './block.json';
 
 registerBlockType( block, {
-	edit: ( { attributes, setAttributes, clientId, ...props } ) => {
+	edit: ( { attributes, setAttributes } ) => {
 		const blockProps = useBlockProps();
 
 		const {
@@ -30,18 +29,16 @@ registerBlockType( block, {
 				</InspectorControls>
 
 				<div { ...blockProps }>
-					<InnerBlocks />
+					<InnerBlocks/>
 				</div>
 
 			</Fragment>
 		);
 	},
-	save: ( { attributes } ) => {
-
+	save: () => {
 		const blockProps = useBlockProps.save();
 
 		return (
-
 			<div { ...blockProps }>
 				<InnerBlocks.Content/>
 			</div>
