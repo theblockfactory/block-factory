@@ -22,10 +22,12 @@ class BlocksRepository
 
         foreach ($posts as $post) {
             $blocks[] = Block::make([
-                'name'    => sprintf('block-factory/%s', $post->post_name),
+                'name'    => sprintf('block-factory/%s', sanitize_title($post->post_title)),
                 'title'   => $post->post_title,
                 'content' => $post->post_content,
-                // ADD meta
+                'meta'    => [
+                    'bf_LockedLayout' => get_post_meta($post->ID, 'bf_LockedLayout', true)
+                ]
             ]);
         }
 

@@ -1,25 +1,44 @@
-import { registerBlockType } from '@wordpress/blocks';
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+import { __ } from '@wordpress/i18n';
+import { useMemo } from '@wordpress/element';
+import { parse, registerBlockType } from '@wordpress/blocks';
+import { InnerBlocks, InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { PanelBody } from '@wordpress/components';
 
-const extractBlocks = ( { name, attributes, innerBlocks } ) => {
+const extractBlocks = ( { name, attributes, innerBlocks }, meta ) => {
 	return [
 		name,
-		attributes,
-		innerBlocks.map( innerBlock => extractBlocks( innerBlock ) ),
+		{
+			...attributes,
+			meta,
+		},
+		innerBlocks.map( innerBlock => extractBlocks( innerBlock, meta ) ),
 	];
 };
 
 window.BlockFactory.blocks.map( block => registerBlockType( block, {
 	category: block.category,
-	edit: () => {
+	edit: ( { attributes, setAttributes } ) => {
+
+		const blocks = useMemo( () => parse( block.content ), [] );
+		const blockTemplate = useMemo( () => blocks.map( extractedBlock => extractBlocks( extractedBlock, block.meta ) ), [] );
 		const blockProps = useBlockProps();
-		const blocks = wp.blocks.parse( block.content );
-		const blockTemplate = blocks.map( block => extractBlocks( block ) );
 
 		return (
-			<div { ...blockProps }>
-				<InnerBlocks templateLock="all" template={ blockTemplate } />
-			</div>
+			<>
+				<InspectorControls>
+					<PanelBody title={ __( 'Edit', 'block-factory' ) }>
+						<>
+							Edit block
+						</>
+					</PanelBody>
+				</InspectorControls>
+
+				<div { ...blockProps }>
+					<InnerBlocks
+						templateLock={ block.meta?.bf_LockedLayout ? 'all' : null }
+						template={ blockTemplate[ 0 ][ 2 ] }/>
+				</div>
+			</>
 		);
 	},
 	save() {

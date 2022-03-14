@@ -27,4 +27,3 @@ const Layout = () => {
 Layout.getName = () => 'bf-block-styles';
 
 export default Layout;
-
