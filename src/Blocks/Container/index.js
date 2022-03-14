@@ -59,7 +59,7 @@ registerBlockType( block, {
 
 				<div { ...blockProps }>
 					{ blockCount === 0 && (
-						<div>Select some blocks, man!</div>
+						<div>Insert some blocks, man!</div>
 					) }
 					<div style={styles}>
 						<InnerBlocks templateLock={ attributes.meta?.bf_LockedLayout ? 'all' : null }/>
