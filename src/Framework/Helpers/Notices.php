@@ -8,6 +8,13 @@ namespace BlockFactory\Framework\Helpers;
  */
 class Notices
 {
+    public static array $types = [
+        'success',
+        'warning',
+        'error',
+        'info'
+    ];
+
 	/**
 	 * @param  string  $type
 	 * @param  string|callable  $content
@@ -18,7 +25,7 @@ class Notices
 	 */
 	public static function add(string $type, $content, bool $dismissible = false, int $priority = 10): void
 	{
-		$type = in_array($type, ['success', 'warning', 'error', 'info']) ? $type : 'info';
+		$type = in_array($type, self::$types, true) ? $type : 'info';
 
 		add_action(
 			'admin_notices',
