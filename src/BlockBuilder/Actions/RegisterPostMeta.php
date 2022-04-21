@@ -2,11 +2,13 @@
 
 namespace BlockFactory\BlockBuilder\Actions;
 
+/**
+ * Register post meta
+ *
+ * @since 1.0.0
+ */
 class RegisterPostMeta
 {
-    /**
-     * @since 1.0.0
-     */
     public function __invoke(): void
     {
         $authCallback = static function () {

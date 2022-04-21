@@ -4,6 +4,11 @@ namespace BlockFactory\Framework\Helpers;
 
 use InvalidArgumentException;
 
+/**
+ * Hooks helper class
+ *
+ * @since 1.0.0
+ */
 class Hooks
 {
 	/**

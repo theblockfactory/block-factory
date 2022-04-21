@@ -3,6 +3,8 @@
 namespace BlockFactory\Framework\Contracts;
 
 /**
+ * ServiceProvider class
+ *
  * @since 1.0.0
  */
 abstract class ServiceProvider

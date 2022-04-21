@@ -2,6 +2,10 @@
 
 namespace BlockFactory\Framework\Helpers;
 
+/**
+ * Notices helper class
+ * @since 1.0.0
+ */
 class Notices
 {
 	/**

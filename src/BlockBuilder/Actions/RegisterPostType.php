@@ -3,17 +3,14 @@
 namespace BlockFactory\BlockBuilder\Actions;
 
 /**
+ * Register CPT
+ *
  * @since 1.0.0
  */
 class RegisterPostType
 {
     public const SLUG = 'bf_blocks';
 
-    /**
-     * Register CPT
-     *
-     * @since 1.0.0
-     */
     public function __invoke(): void
     {
         $labels = [

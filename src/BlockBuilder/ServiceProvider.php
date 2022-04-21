@@ -9,6 +9,10 @@ use BlockFactory\BlockBuilder\Registry\BlocksRegistry;
 use BlockFactory\BlockBuilder\Repositories\BlocksRepository;
 use BlockFactory\Framework\Helpers\Hooks;
 
+/**
+ * BlockBuilder service provider class
+ * @since 1.0.0
+ */
 class ServiceProvider extends \BlockFactory\Framework\Contracts\ServiceProvider
 {
     /**

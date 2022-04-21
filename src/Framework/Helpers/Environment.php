@@ -2,6 +2,11 @@
 
 namespace BlockFactory\Framework\Helpers;
 
+/**
+ * Environment helper class
+ *
+ * @since 1.0.0
+ */
 class Environment
 {
 	/**

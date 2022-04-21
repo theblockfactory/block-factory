@@ -5,10 +5,14 @@ namespace BlockFactory\BlockBuilder\Repositories;
 use BlockFactory\BlockBuilder\Actions\RegisterPostType as BlockPostType;
 use BlockFactory\BlockBuilder\Models\Dynamic as Block;
 
+/**
+ * Block Repository class
+ */
 class BlocksRepository
 {
     /**
      * @return Block[]
+     * @since 1.0.0
      */
     public function getBlocks(): array
     {

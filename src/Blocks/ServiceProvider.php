@@ -7,6 +7,8 @@ use BlockFactory\Blocks\Container\ContainerBlock;
 
 /**
  * Service Provider responsible for loading Block Factory blocks
+ *
+ * @since 1.0.0
  */
 class ServiceProvider extends \BlockFactory\Framework\Contracts\ServiceProvider
 {

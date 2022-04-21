@@ -5,6 +5,11 @@ namespace BlockFactory\Framework\Contracts;
 use WP_Error;
 use RuntimeException;
 
+/**
+ * Endpoint class
+ *
+ * @since 1.0.0
+ */
 abstract class Endpoint
 {
 	protected string $endpoint;

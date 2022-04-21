@@ -4,6 +4,11 @@ namespace BlockFactory\BlockBuilder\Actions;
 
 use BlockFactory\BlockBuilder\Registry\BlocksRegistry;
 
+/**
+ * Load plugin assets
+ *
+ * @since 1.0.0
+ */
 class LoadAssets
 {
     public function __invoke()

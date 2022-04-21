@@ -6,6 +6,11 @@ use BlockFactory\BlockBuilder\Models\Block;
 use BlockFactory\BlockBuilder\Contracts\BlockInterface;
 use BlockFactory\Framework\Helpers\View;
 
+/**
+ * Container Block
+ *
+ * @since 1.0.0
+ */
 class ContainerBlock implements BlockInterface
 {
 	/**

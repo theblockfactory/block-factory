@@ -10,7 +10,7 @@ use BlockFactory\BlockBuilder\ViewModels\DynamicBlockViewModel;
 use InvalidArgumentException;
 
 /**
- * @since 1.0.0
+ * Blocks Registry class
  */
 class BlocksRegistry
 {
@@ -19,6 +19,10 @@ class BlocksRegistry
      */
     private array $blocks = [];
 
+    /**
+     * @param  Model  $block
+     * @since 1.0.0
+     */
     public function addBlock(Model $block): void
     {
         if (isset($this->blocks[ $block->name ])) {
@@ -34,6 +38,7 @@ class BlocksRegistry
      * Pass an array of FQCN
      *
      * @param  string[]  $blockClasses
+     * @since 1.0.0
      */
     public function addBlocks(array $blockClasses): void
     {
@@ -51,13 +56,22 @@ class BlocksRegistry
     }
 
     /**
+     * Get all blocks
+     *
      * @return Model[]
+     * @since 1.0.0
      */
     public function getBlocks(): array
     {
         return $this->blocks;
     }
 
+    /**
+     * Get Dynamic blocks
+     *
+     * @return array
+     * @since 1.0.0
+     */
     public function getDynamicBlocks(): array
     {
         $blocks = [];
@@ -71,6 +85,10 @@ class BlocksRegistry
         return $blocks;
     }
 
+    /**
+     * Register blocks
+     * @since 1.0.0
+     */
     public function registerBlocks(): void
     {
         foreach ($this->blocks as $block) {
@@ -78,6 +96,14 @@ class BlocksRegistry
         }
     }
 
+    /**
+     * Register blocks categories
+     *
+     * @param  array  $registeredCategories
+     * @since 1.0.0
+     *
+     * @return array
+     */
     public function registerBlocksCategories(array $registeredCategories): array
     {
         $categories = [];

@@ -4,6 +4,10 @@ namespace BlockFactory\Framework\Helpers;
 
 use InvalidArgumentException;
 
+/**
+ * View helper class
+ * @since 1.0.0
+ */
 class View
 {
 	/**

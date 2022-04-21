@@ -10,6 +10,10 @@ use BlockFactory\Framework\Helpers\Notices;
 use DI\Container;
 use InvalidArgumentException;
 
+/**
+ * BlockFactory class
+ * @since 1.0.0
+ */
 class BlockFactory extends Container
 {
 	/**

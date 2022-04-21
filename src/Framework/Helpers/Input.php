@@ -3,6 +3,9 @@
 namespace BlockFactory\Framework\Helpers;
 
 /**
+ * Input helper class
+ * @since 1.0.0
+ *
  * @method static get(string $name, string $filter = '', array|int $options = 0)
  * @method static post(string $name, string $filter = '', array|int $options = 0)
  * @method static cookie(string $name, string $filter = '', array|int $options = 0)
