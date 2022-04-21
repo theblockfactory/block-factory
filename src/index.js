@@ -1,5 +1,5 @@
 // Builder UI
-import './BlockBuilder/resources/js/builder'
+import './BlockBuilder/resources/js/builder';
 
 // Blocks
 import './Blocks/Dynamic';
