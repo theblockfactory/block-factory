@@ -2,6 +2,8 @@
 
 namespace BlockFactory\Framework\Helpers;
 
+use InvalidArgumentException;
+
 /**
  * Input helper class
  * @since 1.0.0
@@ -68,6 +70,8 @@ class Input
 	private function getMethod(string $name): int
 	{
 		switch ($name) {
+			case 'get':
+                return INPUT_GET;
 			case 'post':
 				return INPUT_POST;
 			case 'cookie':
@@ -77,7 +81,7 @@ class Input
 			case 'env':
 				return INPUT_ENV;
 			default:
-				return INPUT_GET;
+                throw new InvalidArgumentException("Method {$name} is not supported");
 		}
 	}
 
