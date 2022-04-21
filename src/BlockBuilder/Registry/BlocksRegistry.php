@@ -4,7 +4,7 @@ namespace BlockFactory\BlockBuilder\Registry;
 
 use BlockFactory\BlockBuilder\Contracts\BlockInterface;
 use BlockFactory\BlockBuilder\Models\Block;
-use BlockFactory\BlockBuilder\Models\Model;
+use BlockFactory\BlockBuilder\Contracts\Model;
 use BlockFactory\BlockBuilder\Models\Dynamic;
 use BlockFactory\BlockBuilder\ViewModels\DynamicBlockViewModel;
 use InvalidArgumentException;
