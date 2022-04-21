@@ -2,6 +2,8 @@
 
 namespace BlockFactory\BlockBuilder\Models;
 
+use BlockFactory\BlockBuilder\Contracts\Model;
+
 /**
  * Dynamic Block Model
  */

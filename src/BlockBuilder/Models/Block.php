@@ -2,6 +2,7 @@
 
 namespace BlockFactory\BlockBuilder\Models;
 
+use BlockFactory\BlockBuilder\Contracts\Model;
 use InvalidArgumentException;
 use JsonException;
 

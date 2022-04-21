@@ -1,6 +1,6 @@
 <?php
 
-namespace BlockFactory\BlockBuilder\Models;
+namespace BlockFactory\BlockBuilder\Contracts;
 
 use InvalidArgumentException;
 
