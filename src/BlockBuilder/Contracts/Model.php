@@ -2,9 +2,10 @@
 
 namespace BlockFactory\BlockBuilder\Contracts;
 
+use BlockFactory\Framework\Contracts\Arrayable;
 use InvalidArgumentException;
 
-abstract class Model
+abstract class Model implements Arrayable
 {
     /**
      * Block name

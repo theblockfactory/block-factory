@@ -3,16 +3,28 @@
 namespace BlockFactory\BlockBuilder\ViewModels;
 
 use BlockFactory\BlockBuilder\Models\Dynamic;
+use BlockFactory\Framework\Contracts\Arrayable;
 
-class DynamicBlockViewModel
+/**
+ * Dynamic Block view model
+ *
+ * @since 1.0.0
+ */
+class DynamicBlockViewModel implements Arrayable
 {
     private Dynamic $block;
 
+    /**
+     * @param  Dynamic  $block
+     */
     public function __construct(Dynamic $block)
     {
         $this->block = $block;
     }
 
+    /**
+     * @since 1.0.0
+     */
     public function toArray() : array
     {
         $data = $this->block->toArray();
